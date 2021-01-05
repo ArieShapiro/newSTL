@@ -10,8 +10,8 @@
   }
 }
 
-/* @media (max-width: 991px) { */
-@media (max-width: 1500px) {
+@media (max-width: 991px) {
+/* @media (max-width: 1500px) { */
   .section-wrap,
   .section-wrap-mp {
     background-attachment: scroll;
