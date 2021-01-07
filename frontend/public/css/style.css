@@ -264,7 +264,8 @@ p {
   }
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) { */
+@media (max-width: 1300px) {
   .navbar-header {
     float: none;
   }
@@ -474,7 +475,8 @@ p {
   border-color: #f2f2f2;
 }
 
-@media (max-width: 991px) {
+/* @media (max-width: 991px) { */
+  @media (max-width: 1300px) {
   .navigation-overlay, .navigation-overlay.sticky {
     background-color: rgba(17, 17, 17, 0.9);
   }
