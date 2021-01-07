@@ -1253,6 +1253,9 @@
 				</div>
 			</section>
 			<!-- end contact -->
+			<!-- 
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN_j543UgLt31yrgwVgMVjVx2E43yBmQ4"></script>
+					-->
 
 			<!-- Google Map -->
 			<!-- <div id="google-map" class="gmap" data-address="Wollzeile 17, 1010 Wien"></div> -->
@@ -1338,8 +1341,6 @@
 		<!-- jQuery Scripts -->
 		<script type="text/javascript" src="js/jquery.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN_j543UgLt31yrgwVgMVjVx2E43yBmQ4"></script>
 		<script type="text/javascript" src="js/gmap3.js"></script>
 		<script type="text/javascript" src="js/plugins.js"></script>
 		<script type="text/javascript" src="revolution/js/jquery.themepunch.tools.min.js"></script>
@@ -1349,40 +1350,40 @@
 
 		<!-- Google Map -->
 		<script type="text/javascript">
-			$(document).ready(function () {
-				var gmapDiv = $('#google-map');
-				var gmapMarker = gmapDiv.attr('data-address');
+			// $(document).ready(function () {
+			// 	var gmapDiv = $('#google-map');
+			// 	var gmapMarker = gmapDiv.attr('data-address');
 
-				gmapDiv
-					.gmap3({
-						zoom: 16,
-						address: gmapMarker,
-						oomControl: true,
-						navigationControl: true,
-						scrollwheel: false,
-						styles: [
-							{
-								featureType: 'all',
-								elementType: 'all',
-								stylers: [{ saturation: '-70' }],
-							},
-						],
-					})
-					.marker({
-						address: gmapMarker,
-						icon: 'img/map_pin.png',
-					})
-					.infowindow({
-						content: 'V Tytana St, Manila, Philippines',
-					})
-					.then(function (infowindow) {
-						var map = this.get(0);
-						var marker = this.get(1);
-						marker.addListener('click', function () {
-							infowindow.open(map, marker);
-						});
-					});
-			});
+			// 	gmapDiv
+			// 		.gmap3({
+			// 			zoom: 16,
+			// 			address: gmapMarker,
+			// 			oomControl: true,
+			// 			navigationControl: true,
+			// 			scrollwheel: false,
+			// 			styles: [
+			// 				{
+			// 					featureType: 'all',
+			// 					elementType: 'all',
+			// 					stylers: [{ saturation: '-70' }],
+			// 				},
+			// 			],
+			// 		})
+			// 		.marker({
+			// 			address: gmapMarker,
+			// 			icon: 'img/map_pin.png',
+			// 		})
+			// 		.infowindow({
+			// 			content: 'V Tytana St, Manila, Philippines',
+			// 		})
+			// 		.then(function (infowindow) {
+			// 			var map = this.get(0);
+			// 			var marker = this.get(1);
+			// 			marker.addListener('click', function () {
+			// 				infowindow.open(map, marker);
+			// 			});
+			// 		});
+			// });
 		</script>
 
 		<script type="text/javascript" src="revolution/js/extensions/revolution.extension.video.min.js"></script>
