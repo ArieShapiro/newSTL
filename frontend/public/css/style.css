@@ -265,7 +265,7 @@ p {
 }
 
 /* @media (max-width: 991px) { */
-@media (max-width: 1260px) {
+@media (max-width: 1360px) {
   .navbar-header {
     float: none;
   }
@@ -476,7 +476,7 @@ p {
 }
 
 /* @media (max-width: 991px) { */
-  @media (max-width: 1260px) {
+  @media (max-width: 1360px) {
   .navigation-overlay, .navigation-overlay.sticky {
     background-color: rgba(17, 17, 17, 0.9);
   }
