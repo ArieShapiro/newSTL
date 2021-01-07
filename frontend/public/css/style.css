@@ -501,7 +501,8 @@ p {
   }
   .navbar-nav {
     width: 100%;
-    padding: 40px 0;
+    /* padding: 40px 0; */
+    padding: 0;
   }
   .navigation-overlay.sticky .navbar-nav>li>a, .navigation-overlay .navbar-nav>li>a {
     padding: 10px 0;
