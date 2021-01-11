@@ -202,7 +202,62 @@
 									data-start="1000"
 									style="z-index: 6"
 								>
-									STL
+									<style>
+										.candle-lighting {
+											border: 2px solid white;
+											max-width: 233px;
+											margin: auto;
+											position: relative;
+											bottom: 20px;
+										}
+										.candle-lighting p {
+											color: white;
+											margin: 0 6px;
+										}
+										.candle-lighting p > span {
+											padding: 8px;
+											font-weight: bold;
+										}
+									</style>
+									<script>
+										let candles;
+										let havdalah;
+										fetch('https://www.hebcal.com/shabbat/?cfg=json&geonameid=2761369&m=50')
+											.then((res) => res.json())
+											.then((data) => {
+												candles = new Date(
+													Date.parse(
+														data.items.find((item) => item.category === 'candles').date
+													)
+												);
+												document.querySelector('.candles').innerText = `${candles.getHours()}:${
+													candles.getMinutes() < 10
+														? '0' + candles.getMinutes()
+														: candles.getMinutes()
+												}`;
+
+												if (data.items.find((item) => item.category === 'havdalah')) {
+													havdalah = new Date(
+														Date.parse(
+															data.items.find((item) => item.category === 'havdalah').date
+														)
+													);
+													document.querySelector(
+														'.havdalah'
+													).innerText = `${havdalah.getHours()}:${
+														havdalah.getMinutes() < 10
+															? '0' + havdalah.getMinutes()
+															: havdalah.getMinutes()
+													}`;
+												} else {
+													document.querySelector('.havdalah').innerText = 'Праздник';
+												}
+											});
+									</script>
+									<div class="candle-lighting">
+										<p>зажигание свечей: <span class="candles"></span></p>
+										<p>выход субботы:<span class="havdalah"></span></p>
+									</div>
 								</div>
 
 								<!-- LAYER NR. 2 -->
@@ -222,7 +277,7 @@
 									data-start="1200"
 									style="z-index: 7"
 								>
-									Еврейская Русскоязычная община Вены
+									<span style="font-size: 1.3em"> Еврейская Русскоязычная община Вены</span>
 								</div>
 
 								<!-- LAYER NR. 3 -->
